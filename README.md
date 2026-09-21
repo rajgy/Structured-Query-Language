@@ -55,11 +55,13 @@ A lightweight demonstration of executing distributed SQL queries using **PySpark
    ```bash
    python SQLPracticing.py
 
+
 4. **Run Local Database Pipeline
 (Ensure your database server is active and update host credentials in sqlPracticing_localhost.py)
- ```bash
-  python sqlPracticing_localhost.py
-   
+    ```bash
+     python sqlPracticing_localhost.py
+
+
 ## Repository Structure
 
 ```text
