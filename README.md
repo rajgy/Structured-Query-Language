@@ -25,3 +25,50 @@ Structured-Query-Language/
 ├── sqlPracticing_localhost.py  # PySpark to local PostgreSQL database connection via JDBC
 ├── sql_practicing.iml          # IDE configuration file
 └── README.md                   # Project documentation
+
+
+
+Technical Overview
+1. PySpark SQL Workflows (SQLPracticing.py)
+SparkSession Management: Initializes entry points for local distributed execution.
+
+In-Memory Querying: Registers DataFrames as temporary SQL views (createOrReplaceTempView) for ANSI SQL operations.
+
+Transformations & Aggregations: Demonstrates relational data filtering, grouping, and multi-field projections using Spark SQL syntax.
+
+2. Localhost Database Pipeline (sqlPracticing_localhost.py)
+Relational Storage Ingestion: Connects PySpark directly to local database instances (PostgreSQL/MySQL) via JDBC driver.
+
+Read/Write Operations: Implements structured reads and configurable data output modes (append, overwrite).
+
+Connection Security: Externalizes database credentials and driver configurations for maintainable pipeline code.
+
+Quickstart & Setup
+Prerequisites
+Python 3.8+
+
+Apache Spark 3.x
+
+PostgreSQL / MySQL (for local database connection)
+
+JDBC Driver (e.g., postgresql-42.x.x.jar)
+
+Installation & Execution
+Clone the Repository
+
+Bash
+git clone [https://github.com/rajgy/Structured-Query-Language.git](https://github.com/rajgy/Structured-Query-Language.git)
+cd Structured-Query-Language
+Install Dependencies
+
+Bash
+pip install pyspark
+Run In-Memory Spark SQL Script
+
+Bash
+python SQLPracticing.py
+Run Local Database Pipeline
+(Ensure your database server is active and update host credentials in sqlPracticing_localhost.py)
+
+Bash
+python sqlPracticing_localhost.py
