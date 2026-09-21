@@ -23,3 +23,17 @@ Structured-Query-Language/
 ├── SQLPracticing.py            # PySpark SQL query execution and DataFrame operations
 ├── sqlPracticing_localhost.py  # PySpark to local PostgreSQL/MySQL database connection via JDBC
 └── README.md                   # Project documentation
+
+
+
+## Technical Overview
+
+### 1. PySpark SQL Workflows (`SQLPracticing.py`)
+* **SparkSession Management:** Initializes entry points for local distributed execution.
+* **In-Memory Querying:** Registers DataFrames as temporary SQL views (`createOrReplaceTempView`) for ANSI SQL operations.
+* **Transformations & Aggregations:** Demonstrates relational data filtering, grouping, and multi-field projections using Spark SQL syntax.
+
+### 2. Localhost Database Pipeline (`sqlPracticing_localhost.py`)
+* **Relational Storage Ingestion:** Connects PySpark directly to local database instances (PostgreSQL/MySQL) via JDBC driver.
+* **Read/Write Operations:** Implements structured reads and configurable data output modes (`append`, `overwrite`).
+* **Connection Security:** Externalizes database credentials and driver configurations for maintainable pipeline code.
