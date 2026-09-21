@@ -16,17 +16,6 @@ A lightweight demonstration of executing distributed SQL queries using **PySpark
 
 ---
 
-## Repository Structure
-
-```text
-Structured-Query-Language/
-├── SQLPracticing/              # Project directory
-├── SQLPracticing.py            # PySpark SQL query execution and DataFrame operations
-├── sqlPracticing_localhost.py  # PySpark to local PostgreSQL database connection via JDBC
-├── sql_practicing.iml          # IDE configuration file
-└── README.md                   # Project documentation
-
-
 
 ## Technical Overview
 
@@ -39,6 +28,7 @@ Structured-Query-Language/
 * **Relational Storage Ingestion:** Connects PySpark directly to local database instances (PostgreSQL/MySQL) via JDBC driver.
 * **Read/Write Operations:** Implements structured reads and configurable data output modes (`append`, `overwrite`).
 * **Connection Security:** Externalizes database credentials and driver configurations for maintainable pipeline code.
+
 
 ---
 
@@ -56,3 +46,29 @@ Structured-Query-Language/
    ```bash
    git clone [https://github.com/rajgy/Structured-Query-Language.git](https://github.com/rajgy/Structured-Query-Language.git)
    cd Structured-Query-Language
+
+2. **Install Dependencies**
+   ```bash
+   pip install pyspark
+
+3. **Run In-Memory Spark SQL Script**
+   ```bash
+   python SQLPracticing.py
+
+4. **Run Local Database Pipeline
+(Ensure your database server is active and update host credentials in sqlPracticing_localhost.py)
+ ```bash
+  python sqlPracticing_localhost.py
+   
+## Repository Structure
+
+```text
+Structured-Query-Language/
+├── SQLPracticing/              # Project directory
+├── SQLPracticing.py            # PySpark SQL query execution and DataFrame operations
+├── sqlPracticing_localhost.py  # PySpark to local PostgreSQL database connection via JDBC
+├── sql_practicing.iml          # IDE configuration file
+└── README.md                   # Project documentation
+
+
+## 
